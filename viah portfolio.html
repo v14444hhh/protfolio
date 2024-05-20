@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Template</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Montserrat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('https://media.giphy.com/media/QAF2NDkBi5OdW/giphy.gif?cid=ecf05e47dfnzyh4vnb2tdcvt87q2820vhzniv86fbzx8nelm&ep=v1_gifs_search&rid=giphy.gif&ct=g') no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeIn 1.5s ease-in-out;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            animation: avatarAppear 2s ease-in-out;
+        }
+
+        @keyframes avatarAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        header {
+            background-color: rgba(225, 183, 212, 0.8);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            animation: headerSlideIn 1.5s ease-in-out;
+        }
+
+        @keyframes headerSlideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            float: left;
+            width: 10%;
+            background: rgba(248, 246, 211, 0.8);
+            padding: 20px;
+            animation: navSlideIn 1.5s ease-in-out;
+        }
+
+        @keyframes navSlideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+
+        .content-container {
+            margin-left: 12%;
+            padding: 20px;
+            animation: contentFadeIn 2s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        @keyframes contentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .image-section {
+            width: 25%;
+            padding: 20px;
+        }
+
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        .links a {
+            margin-right: 10px;
+            color: #555;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .links a:hover {
+            color: #ffa500;
+            transform: scale(1.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+            border-bottom: 3px solid #ffa500;
+            padding-bottom: 5px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .w3-cursive {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        ul.w3-ul {
+            padding-left: 20px;
+        }
+
+        ul.w3-ul li {
+            margin-bottom: 10px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .section-container {
+            margin-top: 40px;
+        }
+
+        .rectangle-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                width: 100%;
+                float: none;
+                padding: 10px;
+            }
+
+            .content-container {
+                margin-left: 0;
+            }
+
+            .image-section {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+ <iframe width="0" height="0" src="https://youtu.be/0ZJlrbUbzs0?si=6K2mL7SjCKq2n0R-" frameborder="0" allow="autoplay; loop" allowfullscreen></iframe>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Images</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling */
+            background-color: #b9cfdf;
+        }
+
+        .floating-image {
+            position: absolute;
+            animation: floatAnimation linear infinite;
+            pointer-events: none; /* Prevent clicks on the images */
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-100px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+       
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+       
+        function createFloatingImage() {
+          
+            var img = new Image();
+            
+            img.src = 'https://i.pinimg.com/736x/5f/fe/1f/5ffe1f1625fc33d2480dc9786bf45cc1.jpg           
+            img.classList.add('floating-image');
+          
+            img.style.left = getRandomNumber(0, window.innerWidth - 50) + 'px';
+            img.style.top = getRandomNumber(0, window.innerHeight - 50) + 'px';
+        
+            document.body.appendChild(img);
+        }
+        window.onload = function () {
+                       var numImages = 10;
+            for (var i = 0; i < numImages; i++) {
+                createFloatingImage();
+            }
+        };
+
+
+    </script>
+</body>
+
+</html>
+
+
+    <header>
+        <h2>˚₊‧꒰ა ☆ ໒꒱ ‧₊˚</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://twitter.com/Yumi0_____0">Twitter</a></li>
+            <li><a href="https://www.facebook.com/viahmiah.odonzo.9">Facebook</a></li>
+            <li><a href="https://www.instagram.com/vi_to_the_ah/">Instagram</a></li>
+        </ul>
+    </nav>
+
+    <section class="content-container">
+
+        <div class="image-section w3-padding-small">
+            <img src="C:\Users\Administrator\Downloads\me.jpg" alt="Avatar" class="avatar">
+            <div class="links w3-margin-top w3-padding-small">
+                <a class="icon-link" href="https://www.facebook.com/viahmiah.odonzo.9">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a class="icon-link" href="https://www.instagram.com/vi_to_the_ah/">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a class="icon-link" href="https://twitter.com/Yumi0_____0">
+                    <i data-feather="twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="content-container w3-padding-large">
+
+            <div id="home" class="home w3-margin-top-4 w3-cursive">
+                <p style="font-style: italic; font-size:x-large;">"Wooopieee."</p>
+                <h1>Viah Odonzo</h1>
+            </div>
+
+            <div id="about" class="section-container w3-cursive w3-large rectangle-container">
+                <h2>ABOUT</h2>
+                <p>I am Viah Odonzo, you can call me Vi for short. I am 14 years old and my birthday is on April 14. I am a student in RTPM-DSHS, and I barely get sleep. I am 5'3" and I weigh 48 kilograms.</p>
+                <h2>MY FRIENDS</h2>
+                <div>
+                    <p><img src="C:\Users\Administrator\Downloads\elysha.jpg" alt="Elysha" class="avatar"> Elysha / Lysh</p>
+                    <p><img src="C:\Users\Administrator\Downloads\zoee.jpg" alt="Zoe" class="avatar"> Zoe / Zo</p>
+                    <p><img src="C:\Users\Administrator\Downloads\maryyyyy.jpg" alt="Mary" class="avatar"> Mary / Mare</p>
+                    <p><img src="C:\Users\Administrator\Downloads\sofifififif.jpg" alt="Sofia" class="avatar"> Sofia / Sofi</p>
+                    <p><img src="C:\Users\Administrator\Downloads\matt.jpg" alt="Matt Tyler" class="avatar"> Matt / Tyler</p>
+                    <p><img src="C:\Users\Administrator\Downloads\rhiam.jpg" alt="Rhiam" class="avatar"> Rhiam / Rhi</p>
+                    <p><img src="C:\Users\Administrator\Downloads\kalrence.jpg" alt="Klarence" class="avatar"> Klarence / Kla</p>
+                   <p><img src="C:\Users\Administrator\Downloads\keira.jpg" alt="keira" class="avatar"> Keira / Keir </p>
+                    <p><img src="C:\Users\Administrator\Downloads\eliallyyy ohohohoh.jpg" alt="Elialy" class="avatar"> Elialy / Eli</p>
+                </div>
+            </div>
+
+            <div id="interests" class="section-container w3-cursive rectangle-container">
+                <h2>MY SKILLS</h2>
+                <h3>Soft Skills</h3>
+                <ul class="w3-ul">
+                    <li>I draw portraits</li>
+                    <li>I am a fast learner but tend to forget easily</li>
+                    <li>I can do archery, but I'm still a beginner</li>
+                    <li>I can box a little but im also a beginner at it too</li>
+                </ul>
+                <h2>MY HOBBIES AND INTERESTS</h2>
+                <ul class="w3-ul">
+                    <li>I draw a lot</li>
+                    <li>I play the guitar</li>
+                    <li>I listen to music</li>
+                    <li>I love playing strategic games</li>
+                    <li>I like writing literature</li>
+                </ul>
+            </div>
+
+            <div id="contact" class="section-container w3-cursive rectangle-container">
+                <h2>MY CONTACT DETAILS</h2>
+                <p>Name: Viah Odonzo</p>
+                <p>Email: vmodonzo@email.com</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle mobile navigation
+        function toggleNavigation() {
+            let nav = document.getElementById("mobile-nav");
+            nav.classList.toggle('w3-show');
+        }
+
+        // Script to load feather icons
+        feather.replace()
+    </script>
+</body>
+
+</html>
